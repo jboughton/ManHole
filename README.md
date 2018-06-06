@@ -19,4 +19,7 @@ Sometimes the Pi-Hole may become unresponsive, especially if you set auto-refres
 Grab the latest release from: https://github.com/jboughton/ManHole/blob/master/ManHole/bin/Release/ManHole.exe
 
 # License
-ManHole is open source freeware, just like the Pi-Hole. You're free to do with it what you wish, as long as you attribute me. No warranties or guarantees implied.
+ManHole is open source freeware, just like the Pi-Hole. You're free to do with it what you wish, as long as you attribute me. 
+
+# Disclaimer
+No warranties or guarantees implied. ManHole is a third party application, and is not affiliated with Pi-Hole. Pi-hole® is a registered trademark of Pi-hole LLC. Manhole may not always work with the latest version of Pi-hole.
