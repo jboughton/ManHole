@@ -23,34 +23,22 @@ Partial Class frmAbout
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAbout))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblAboutAppTitle = New System.Windows.Forms.Label()
         Me.lblAboutVersion = New System.Windows.Forms.Label()
         Me.lblAboutText = New System.Windows.Forms.Label()
         Me.btnAboutClose = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 48)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(264, 301)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'lblAboutAppTitle
         '
         Me.lblAboutAppTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblAboutAppTitle.Font = New System.Drawing.Font("Segoe UI Semilight", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutAppTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblAboutAppTitle.Location = New System.Drawing.Point(282, 48)
+        Me.lblAboutAppTitle.Location = New System.Drawing.Point(12, 48)
         Me.lblAboutAppTitle.Name = "lblAboutAppTitle"
-        Me.lblAboutAppTitle.Size = New System.Drawing.Size(506, 58)
+        Me.lblAboutAppTitle.Size = New System.Drawing.Size(776, 58)
         Me.lblAboutAppTitle.TabIndex = 1
         Me.lblAboutAppTitle.Text = "ManHole"
         Me.lblAboutAppTitle.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -60,9 +48,9 @@ Partial Class frmAbout
         Me.lblAboutVersion.BackColor = System.Drawing.Color.Transparent
         Me.lblAboutVersion.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutVersion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblAboutVersion.Location = New System.Drawing.Point(282, 106)
+        Me.lblAboutVersion.Location = New System.Drawing.Point(12, 106)
         Me.lblAboutVersion.Name = "lblAboutVersion"
-        Me.lblAboutVersion.Size = New System.Drawing.Size(506, 32)
+        Me.lblAboutVersion.Size = New System.Drawing.Size(776, 32)
         Me.lblAboutVersion.TabIndex = 2
         Me.lblAboutVersion.Text = "Version"
         Me.lblAboutVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -72,9 +60,9 @@ Partial Class frmAbout
         Me.lblAboutText.BackColor = System.Drawing.Color.Transparent
         Me.lblAboutText.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutText.ForeColor = System.Drawing.Color.LightGray
-        Me.lblAboutText.Location = New System.Drawing.Point(289, 138)
+        Me.lblAboutText.Location = New System.Drawing.Point(17, 138)
         Me.lblAboutText.Name = "lblAboutText"
-        Me.lblAboutText.Size = New System.Drawing.Size(499, 211)
+        Me.lblAboutText.Size = New System.Drawing.Size(771, 211)
         Me.lblAboutText.TabIndex = 3
         Me.lblAboutText.Text = resources.GetString("lblAboutText.Text")
         '
@@ -119,7 +107,6 @@ Partial Class frmAbout
         Me.Controls.Add(Me.lblAboutText)
         Me.Controls.Add(Me.lblAboutVersion)
         Me.Controls.Add(Me.lblAboutAppTitle)
-        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -130,12 +117,9 @@ Partial Class frmAbout
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "About ManHole"
         Me.TopMost = True
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblAboutAppTitle As Label
     Friend WithEvents lblAboutVersion As Label
     Friend WithEvents lblAboutText As Label
