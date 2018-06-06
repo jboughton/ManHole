@@ -1,0 +1,15 @@
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Debug\ManHole.exe.config
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Debug\ManHole.exe
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Debug\ManHole.pdb
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Debug\ManHole.xml
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.vbprojAssemblyReference.cache
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.frmMain.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.Resources.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.vbproj.GenerateResource.cache
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.vbproj.CoreCompileInputs.cache
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.exe
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.xml
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.pdb
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.frmSettings.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.frmAbout.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Debug\ManHole.frmDebug.resources

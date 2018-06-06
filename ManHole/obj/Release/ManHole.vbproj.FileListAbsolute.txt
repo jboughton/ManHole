@@ -1,0 +1,13 @@
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.frmAbout.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.frmSettings.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.frmMain.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.Resources.resources
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.vbproj.GenerateResource.cache
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.vbproj.CoreCompileInputs.cache
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Release\ManHole.exe.config
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Release\ManHole.exe
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Release\ManHole.pdb
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Release\ManHole.xml
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.exe
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.xml
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.pdb
