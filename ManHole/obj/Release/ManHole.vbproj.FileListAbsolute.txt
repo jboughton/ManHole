@@ -12,3 +12,25 @@ C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.exe
 C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.xml
 C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.pdb
 C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.vbprojAssemblyReference.cache
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Release\ManHole.exe.manifest
+C:\Users\djapo\source\repos\ManHole\ManHole\bin\Release\ManHole.application
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.exe.manifest
+C:\Users\djapo\source\repos\ManHole\ManHole\obj\Release\ManHole.application
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\bin\Release\ManHole.exe.config
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\bin\Release\ManHole.exe.manifest
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\bin\Release\ManHole.application
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\bin\Release\ManHole.exe
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\bin\Release\ManHole.pdb
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\bin\Release\ManHole.xml
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.frmAbout.resources
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.frmSettings.resources
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.frmMain.resources
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.Resources.resources
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.vbproj.GenerateResource.cache
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.vbproj.CoreCompileInputs.cache
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.exe.manifest
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.application
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.exe
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.xml
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.pdb
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.vbprojAssemblyReference.cache

@@ -29,6 +29,8 @@ Partial Class frmAbout
         Me.btnAboutClose = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblAboutAppTitle
@@ -36,7 +38,7 @@ Partial Class frmAbout
         Me.lblAboutAppTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblAboutAppTitle.Font = New System.Drawing.Font("Segoe UI Semilight", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutAppTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblAboutAppTitle.Location = New System.Drawing.Point(12, 48)
+        Me.lblAboutAppTitle.Location = New System.Drawing.Point(12, 9)
         Me.lblAboutAppTitle.Name = "lblAboutAppTitle"
         Me.lblAboutAppTitle.Size = New System.Drawing.Size(776, 58)
         Me.lblAboutAppTitle.TabIndex = 1
@@ -48,7 +50,7 @@ Partial Class frmAbout
         Me.lblAboutVersion.BackColor = System.Drawing.Color.Transparent
         Me.lblAboutVersion.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutVersion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblAboutVersion.Location = New System.Drawing.Point(12, 106)
+        Me.lblAboutVersion.Location = New System.Drawing.Point(12, 71)
         Me.lblAboutVersion.Name = "lblAboutVersion"
         Me.lblAboutVersion.Size = New System.Drawing.Size(776, 32)
         Me.lblAboutVersion.TabIndex = 2
@@ -60,9 +62,9 @@ Partial Class frmAbout
         Me.lblAboutText.BackColor = System.Drawing.Color.Transparent
         Me.lblAboutText.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutText.ForeColor = System.Drawing.Color.LightGray
-        Me.lblAboutText.Location = New System.Drawing.Point(17, 138)
+        Me.lblAboutText.Location = New System.Drawing.Point(264, 107)
         Me.lblAboutText.Name = "lblAboutText"
-        Me.lblAboutText.Size = New System.Drawing.Size(771, 211)
+        Me.lblAboutText.Size = New System.Drawing.Size(524, 260)
         Me.lblAboutText.TabIndex = 3
         Me.lblAboutText.Text = resources.GetString("lblAboutText.Text")
         '
@@ -93,6 +95,17 @@ Partial Class frmAbout
         Me.Button2.Text = "Donate To Pi-Hole"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 106)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(258, 261)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'frmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -101,6 +114,7 @@ Partial Class frmAbout
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAboutClose)
@@ -117,6 +131,7 @@ Partial Class frmAbout
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "About ManHole"
         Me.TopMost = True
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -126,4 +141,5 @@ Partial Class frmAbout
     Friend WithEvents btnAboutClose As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

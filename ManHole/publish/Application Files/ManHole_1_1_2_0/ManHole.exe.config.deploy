@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="ManHole.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+    </startup>
+    <userSettings>
+        <ManHole.My.MySettings>
+            <setting name="AuthKey" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="PiHoleURL" serializeAs="String">
+                <value>http://pi.hole/admin/</value>
+            </setting>
+            <setting name="UpdateInterval" serializeAs="String">
+                <value>30</value>
+            </setting>
+        </ManHole.My.MySettings>
+    </userSettings>
+</configuration>
