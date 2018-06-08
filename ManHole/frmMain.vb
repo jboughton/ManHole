@@ -129,10 +129,73 @@ Public Class frmMain
         End If
     End Sub
 
+    Private Sub GetTopBlocked()
+        Try
+
+            Dim piHoleURL As String = My.Settings.PiHoleURL.ToString
+            Dim phAuthToken As String = My.Settings.AuthKey.ToString
+            Dim strURL As String = piHoleURL & "api.php?topItems=1&auth=" & My.Settings.AuthKey.ToString
+
+            Dim strOutput As String = ""
+
+            Dim wrResponse As WebResponse
+            Dim wrRequest As WebRequest = HttpWebRequest.Create(strURL)
+
+            wrResponse = wrRequest.GetResponse()
+
+            Using sr As New StreamReader(wrResponse.GetResponseStream())
+                strOutput = sr.ReadToEnd()
+                ' Close and clean up the StreamReader
+                sr.Close()
+            End Using
+
+            'Formatting Techniques
+
+            ' Remove Doctype ( HTML 5 )
+            strOutput = Regex.Replace(strOutput, "<!(.|\s)*?>", "")
+
+            ' Remove HTML Tags
+            strOutput = Regex.Replace(strOutput, "</?[a-z][a-z0-9]*[^<>]*>", "")
+
+            ' Remove HTML Comments
+            strOutput = Regex.Replace(strOutput, "<!--(.|\s)*?-->", "")
+
+            ' Remove Script Tags
+            strOutput = Regex.Replace(strOutput, "<script.*?</script>", "", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
+
+            ' Remove Stylesheets
+            strOutput = Regex.Replace(strOutput, "<style.*?</style>", "", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
+
+            ' Remove more unwanted characters from the string
+            strOutput = strOutput.Replace("{", "")
+            strOutput = strOutput.Replace("}", "")
+            strOutput = strOutput.Replace("""", "")
+            strOutput = strOutput.Replace("_", " ")
+            strOutput = strOutput.Replace(":", ": ")
+            strOutput = strOutput.Replace("top queries:", "Top Queries: ")
+            strOutput = strOutput.Replace("top ads:", "Top Ads: ")
+
+            Dim piholeAPIarray As String()
+            piholeAPIarray = strOutput.Split(",")
+
+            'Processing the array
+            Dim strval As String = ""
+            For i As Integer = 0 To piholeAPIarray.Length - 1
+                strval = piholeAPIarray(i)
+                listTop.Items.Add(strval)
+            Next
+
+
+        Catch ex As Exception
+
+            Console.WriteLine(ex.Message, "Error")
+
+        End Try
+    End Sub
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Setting version display info on the main window
-        lblAppName.Text = My.Application.Info.ProductName
-        lblAppVersion.Text = "Version " & My.Application.Info.Version.ToString
+        Me.Text = " ManHole v" & My.Application.Info.Version.ToString
 
         'Checking settings
         If My.Settings.AuthKey.ToString = "" Or My.Settings.PiHoleURL.ToString = "" Then
@@ -148,6 +211,10 @@ Public Class frmMain
         If My.Settings.PiHoleURL.ToString IsNot "" Then
             Scrape()
             RecentBlocked()
+        End If
+
+        If My.Settings.AuthKey.ToString IsNot "" Then
+            GetTopBlocked()
         End If
 
         If My.Settings.UpdateInterval.ToString IsNot "" Then
@@ -191,12 +258,20 @@ Public Class frmMain
         listVars.Items.Clear()
         Scrape()
         RecentBlocked()
+        If My.Settings.AuthKey.ToString IsNot "" Then
+            listTop.Items.Clear()
+            GetTopBlocked()
+        End If
     End Sub
 
     Private Sub tmrUpdate_Tick(sender As Object, e As EventArgs) Handles tmrUpdate.Tick
         listVars.Items.Clear()
         Scrape()
         RecentBlocked()
+        If My.Settings.AuthKey.ToString IsNot "" Then
+            listTop.Items.Clear()
+            GetTopBlocked()
+        End If
         mnuAutoRefresh.Checked = True
     End Sub
 
@@ -263,4 +338,5 @@ Public Class frmMain
     Private Sub mnuShowMainWindow_Click(sender As Object, e As EventArgs) Handles mnuShowMainWindow.Click
         Show()
     End Sub
+
 End Class

@@ -24,8 +24,6 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Me.lblAppName = New System.Windows.Forms.Label()
-        Me.lblAppVersion = New System.Windows.Forms.Label()
         Me.TrayIcon = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.btnSettings = New System.Windows.Forms.Button()
         Me.btnAbout = New System.Windows.Forms.Button()
@@ -46,30 +44,9 @@ Partial Class frmMain
         Me.mnuAutoRefresh = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPHEnabled = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExitManHole = New System.Windows.Forms.ToolStripMenuItem()
+        Me.listTop = New System.Windows.Forms.ListBox()
         Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'lblAppName
-        '
-        Me.lblAppName.BackColor = System.Drawing.Color.Transparent
-        Me.lblAppName.Font = New System.Drawing.Font("Segoe UI Semilight", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAppName.Location = New System.Drawing.Point(12, 9)
-        Me.lblAppName.Name = "lblAppName"
-        Me.lblAppName.Size = New System.Drawing.Size(360, 49)
-        Me.lblAppName.TabIndex = 0
-        Me.lblAppName.Text = "ManHole"
-        Me.lblAppName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblAppVersion
-        '
-        Me.lblAppVersion.BackColor = System.Drawing.Color.Transparent
-        Me.lblAppVersion.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAppVersion.Location = New System.Drawing.Point(12, 58)
-        Me.lblAppVersion.Name = "lblAppVersion"
-        Me.lblAppVersion.Size = New System.Drawing.Size(360, 28)
-        Me.lblAppVersion.TabIndex = 1
-        Me.lblAppVersion.Text = "Version"
-        Me.lblAppVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TrayIcon
         '
@@ -80,7 +57,7 @@ Partial Class frmMain
         'btnSettings
         '
         Me.btnSettings.ForeColor = System.Drawing.Color.Black
-        Me.btnSettings.Location = New System.Drawing.Point(12, 460)
+        Me.btnSettings.Location = New System.Drawing.Point(12, 398)
         Me.btnSettings.Name = "btnSettings"
         Me.btnSettings.Size = New System.Drawing.Size(117, 36)
         Me.btnSettings.TabIndex = 2
@@ -90,7 +67,7 @@ Partial Class frmMain
         'btnAbout
         '
         Me.btnAbout.ForeColor = System.Drawing.Color.Black
-        Me.btnAbout.Location = New System.Drawing.Point(135, 460)
+        Me.btnAbout.Location = New System.Drawing.Point(135, 398)
         Me.btnAbout.Name = "btnAbout"
         Me.btnAbout.Size = New System.Drawing.Size(117, 36)
         Me.btnAbout.TabIndex = 3
@@ -100,7 +77,7 @@ Partial Class frmMain
         'btnExit
         '
         Me.btnExit.ForeColor = System.Drawing.Color.Black
-        Me.btnExit.Location = New System.Drawing.Point(258, 460)
+        Me.btnExit.Location = New System.Drawing.Point(258, 398)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(117, 36)
         Me.btnExit.TabIndex = 4
@@ -111,7 +88,7 @@ Partial Class frmMain
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 86)
+        Me.Label1.Location = New System.Drawing.Point(12, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(164, 28)
         Me.Label1.TabIndex = 5
@@ -123,7 +100,7 @@ Partial Class frmMain
         Me.lblPHAdminLink.BackColor = System.Drawing.Color.Transparent
         Me.lblPHAdminLink.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPHAdminLink.LinkColor = System.Drawing.Color.Cyan
-        Me.lblPHAdminLink.Location = New System.Drawing.Point(173, 91)
+        Me.lblPHAdminLink.Location = New System.Drawing.Point(173, 12)
         Me.lblPHAdminLink.Name = "lblPHAdminLink"
         Me.lblPHAdminLink.Size = New System.Drawing.Size(202, 23)
         Me.lblPHAdminLink.TabIndex = 6
@@ -139,7 +116,7 @@ Partial Class frmMain
         Me.listVars.ForeColor = System.Drawing.Color.LightGray
         Me.listVars.FormattingEnabled = True
         Me.listVars.ItemHeight = 21
-        Me.listVars.Location = New System.Drawing.Point(12, 201)
+        Me.listVars.Location = New System.Drawing.Point(12, 143)
         Me.listVars.Name = "listVars"
         Me.listVars.Size = New System.Drawing.Size(363, 212)
         Me.listVars.TabIndex = 7
@@ -147,7 +124,7 @@ Partial Class frmMain
         'Button1
         '
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(12, 419)
+        Me.Button1.Location = New System.Drawing.Point(12, 357)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(117, 35)
         Me.Button1.TabIndex = 8
@@ -158,7 +135,7 @@ Partial Class frmMain
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 114)
+        Me.Label2.Location = New System.Drawing.Point(13, 35)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(129, 28)
         Me.Label2.TabIndex = 9
@@ -169,7 +146,7 @@ Partial Class frmMain
         '
         Me.lblPHStatus.BackColor = System.Drawing.Color.Transparent
         Me.lblPHStatus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPHStatus.Location = New System.Drawing.Point(135, 114)
+        Me.lblPHStatus.Location = New System.Drawing.Point(135, 35)
         Me.lblPHStatus.Name = "lblPHStatus"
         Me.lblPHStatus.Size = New System.Drawing.Size(129, 28)
         Me.lblPHStatus.TabIndex = 10
@@ -182,7 +159,7 @@ Partial Class frmMain
         'btnAutoRefresh
         '
         Me.btnAutoRefresh.ForeColor = System.Drawing.Color.Black
-        Me.btnAutoRefresh.Location = New System.Drawing.Point(135, 419)
+        Me.btnAutoRefresh.Location = New System.Drawing.Point(135, 357)
         Me.btnAutoRefresh.Name = "btnAutoRefresh"
         Me.btnAutoRefresh.Size = New System.Drawing.Size(240, 35)
         Me.btnAutoRefresh.TabIndex = 11
@@ -193,7 +170,7 @@ Partial Class frmMain
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(13, 142)
+        Me.Label3.Location = New System.Drawing.Point(13, 63)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(148, 28)
         Me.Label3.TabIndex = 12
@@ -205,7 +182,7 @@ Partial Class frmMain
         Me.lblRecentlyBlocked.BackColor = System.Drawing.Color.Transparent
         Me.lblRecentlyBlocked.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRecentlyBlocked.LinkColor = System.Drawing.Color.Cyan
-        Me.lblRecentlyBlocked.Location = New System.Drawing.Point(160, 147)
+        Me.lblRecentlyBlocked.Location = New System.Drawing.Point(160, 68)
         Me.lblRecentlyBlocked.Name = "lblRecentlyBlocked"
         Me.lblRecentlyBlocked.Size = New System.Drawing.Size(215, 23)
         Me.lblRecentlyBlocked.TabIndex = 13
@@ -249,13 +226,27 @@ Partial Class frmMain
         Me.mnuExitManHole.Size = New System.Drawing.Size(180, 22)
         Me.mnuExitManHole.Text = "Exit ManHole"
         '
+        'listTop
+        '
+        Me.listTop.BackColor = System.Drawing.Color.Black
+        Me.listTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.listTop.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listTop.ForeColor = System.Drawing.Color.LightGray
+        Me.listTop.FormattingEnabled = True
+        Me.listTop.ItemHeight = 21
+        Me.listTop.Location = New System.Drawing.Point(12, 96)
+        Me.listTop.Name = "listTop"
+        Me.listTop.Size = New System.Drawing.Size(363, 44)
+        Me.listTop.TabIndex = 14
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(387, 508)
+        Me.ClientSize = New System.Drawing.Size(387, 447)
+        Me.Controls.Add(Me.listTop)
         Me.Controls.Add(Me.lblRecentlyBlocked)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnAutoRefresh)
@@ -268,8 +259,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnAbout)
         Me.Controls.Add(Me.btnSettings)
-        Me.Controls.Add(Me.lblAppVersion)
-        Me.Controls.Add(Me.lblAppName)
         Me.ForeColor = System.Drawing.Color.LightGray
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -282,9 +271,6 @@ Partial Class frmMain
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents lblAppName As Label
-    Friend WithEvents lblAppVersion As Label
     Friend WithEvents TrayIcon As NotifyIcon
     Friend WithEvents btnSettings As Button
     Friend WithEvents btnAbout As Button
@@ -305,4 +291,5 @@ Partial Class frmMain
     Friend WithEvents mnuSettings As ToolStripMenuItem
     Friend WithEvents mnuAutoRefresh As ToolStripMenuItem
     Friend WithEvents mnuPHEnabled As ToolStripMenuItem
+    Friend WithEvents listTop As ListBox
 End Class
