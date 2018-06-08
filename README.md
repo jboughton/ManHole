@@ -7,13 +7,13 @@ Sometimes the Pi-Hole may become unresponsive, especially if you set auto-refres
 ## Screenshots
 
 ### The main interface
-![Main interface](https://i.imgur.com/t7q4SyZ.png)
+![Main interface](https://i.imgur.com/TwtBk3l.png)
 
 ### The settings panel
 ![Settings panel](https://i.imgur.com/FLw1f5G.png)
 
 ### The right click menu
-![The right click tray menu](https://i.imgur.com/Mqu6TZh.png)
+![The right click tray menu](https://i.imgur.com/KnpxYj4.png)
 
 # Download
 Grab the latest release from: https://github.com/jboughton/ManHole/blob/master/ManHole/bin/Release/ManHole.exe
