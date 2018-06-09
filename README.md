@@ -7,7 +7,7 @@ Sometimes the Pi-Hole may become unresponsive, especially if you set auto-refres
 ## Screenshots
 
 ### The main interface
-![Main interface](https://i.imgur.com/TwtBk3l.png)
+![Main interface](https://i.imgur.com/V475F5U.png)
 
 ### The settings panel
 ![Settings panel](https://i.imgur.com/FLw1f5G.png)
