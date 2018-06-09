@@ -52,11 +52,15 @@ Public Class frmMain
             Dim piholeAPIarray As String()
             piholeAPIarray = strOutput.Split(",")
 
+            Dim dict As New Dictionary(Of String, String)
+
             'Processing the array
             Dim strval As String = ""
             For i As Integer = 0 To piholeAPIarray.Length - 1
                 strval = piholeAPIarray(i)
-                listVars.Items.Add(strval)
+
+                dict.Add(strval.Split(": ")(0), strval.Split(": ")(1))
+
                 If strval = "Status: Enabled" Then
                     lblPHStatus.Text = "Enabled"
                     lblPHStatus.ForeColor = Color.Green
@@ -70,6 +74,60 @@ Public Class frmMain
                 End If
             Next
 
+            'Domains Being Blocked
+            Dim DomainsBlocked As String = dict.Item("Domains Being Blocked")
+            DomainsBlocked = FormatNumber(DomainsBlocked, 0, , , TriState.True)
+            lblDomainsBlocked.Text = DomainsBlocked
+
+            'DNS Queries Today
+            Dim DNSQueriesToday As String = dict.Item("Dns Queries Today")
+            DNSQueriesToday = FormatNumber(DNSQueriesToday, 0, , , TriState.True)
+            lblDNSQueriesToday.Text = DNSQueriesToday
+
+            'Ads Blocked Today
+            Dim AdsBlockedToday As String = dict.Item("Ads Blocked Today")
+            AdsBlockedToday = FormatNumber(AdsBlockedToday, 0, , , TriState.True)
+            lblAdsBlocked.Text = AdsBlockedToday
+
+            'Ads Percentage Today
+            Dim AdsPercentageToday As String = dict.Item("Ads Percentage Today")
+            AdsPercentageToday = FormatNumber(AdsPercentageToday, 0, , , TriState.True)
+            prgBlocked.Value = AdsPercentageToday
+            If prgBlocked.Value <= "25" Then
+                prgBlocked.ForeColor = Color.Green
+            ElseIf prgBlocked.Value > "25" And prgBlocked.Value <= "50" Then
+                prgBlocked.ForeColor = Color.Yellow
+            ElseIf prgBlocked.Value > "50" And prgBlocked.Value <= "75" Then
+                prgBlocked.ForeColor = Color.Orange
+            ElseIf prgBlocked.Value > "75" Then
+                prgBlocked.ForeColor = Color.Red
+            End If
+            lblAdsPercentage.Text = AdsPercentageToday & "%"
+
+            'Unique Domains
+            Dim UniqueDomains As String = dict.Item("Unique Domains")
+            UniqueDomains = FormatNumber(UniqueDomains, 0, , , TriState.True)
+            lblUniqueDomains.Text = UniqueDomains
+
+            'Queries Forwarded
+            Dim QueriesForwarded As String = dict.Item("Queries Forwarded")
+            QueriesForwarded = FormatNumber(QueriesForwarded, 0, , , TriState.True)
+            lblQueriesForwarded.Text = QueriesForwarded
+
+            'Queries Cached
+            Dim QueriesCached As String = dict.Item("Queries Cached")
+            QueriesCached = FormatNumber(QueriesCached, 0, , , TriState.True)
+            lblQueriesCached.Text = QueriesCached
+
+            'Clients Ever Seen
+            Dim ClientsEverSeen As String = dict.Item("Clients Ever Seen")
+            ClientsEverSeen = FormatNumber(ClientsEverSeen, 0, , , TriState.True)
+            lblClientsEverSeen.Text = ClientsEverSeen
+
+            'Unique Clients
+            Dim UniqueClients As String = dict.Item("Unique Clients")
+            UniqueClients = FormatNumber(UniqueClients, 0, , , TriState.True)
+            lblUniqueClients.Text = UniqueClients
 
         Catch ex As Exception
 
@@ -228,7 +286,7 @@ Public Class frmMain
         Hide()
     End Sub
 
-    Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
+    Private Sub btnSettings_Click(sender As Object, e As EventArgs)
         frmSettings.Show()
     End Sub
 
@@ -241,12 +299,9 @@ Public Class frmMain
         Show()
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        TrayIcon.Visible = False
-        End
-    End Sub
 
-    Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
+
+    Private Sub btnAbout_Click(sender As Object, e As EventArgs)
         frmAbout.Show()
     End Sub
 
@@ -255,7 +310,6 @@ Public Class frmMain
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        listVars.Items.Clear()
         Scrape()
         RecentBlocked()
         If My.Settings.AuthKey.ToString IsNot "" Then
@@ -265,7 +319,6 @@ Public Class frmMain
     End Sub
 
     Private Sub tmrUpdate_Tick(sender As Object, e As EventArgs) Handles tmrUpdate.Tick
-        listVars.Items.Clear()
         Scrape()
         RecentBlocked()
         If My.Settings.AuthKey.ToString IsNot "" Then
@@ -339,4 +392,11 @@ Public Class frmMain
         Show()
     End Sub
 
+    Private Sub btnCloseToTray_Click(sender As Object, e As EventArgs) Handles btnCloseToTray.Click
+        Hide()
+    End Sub
+
+    Private Sub mnuAbout_Click(sender As Object, e As EventArgs) Handles mnuAbout.Click
+        frmAbout.Show()
+    End Sub
 End Class

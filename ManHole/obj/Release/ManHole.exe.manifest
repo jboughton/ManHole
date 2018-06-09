@@ -4,7 +4,7 @@
   <description asmv2:iconFile="manhole-icon-new.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="ManHole" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="ManHole" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="ManHole.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,26 +43,17 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ManHole.exe" size="2498496">
-      <assemblyIdentity name="ManHole" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ManHole.exe" size="2522048">
+      <assemblyIdentity name="ManHole" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ingiVd2d16IKATb8jtzjcYMagCqK0iJsoYMNgsV4DAY=</dsig:DigestValue>
+        <dsig:DigestValue>zzMfUbf6VwHcxqx3C8+h3O5vgMGmMixSCLZG2jihIWU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="icon.ico" size="121033">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>x/nNakErZrJEnrHuhEECydbVVunPPNIaDzGddQfmqcw=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="ManHole.exe.config" size="1151">
     <hash>
       <dsig:Transforms>
@@ -70,15 +61,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>/8LPauLLeFPQykmyq6/xwnxS+S+QtI91pzF8cfnNlIs=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="manhole-icon.ico" size="112024">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QGcyAhCunRabQFweo95Tpk/e9TkCNJztnqO/qXJLbjA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="manhole-icon-new.ico" size="113667">

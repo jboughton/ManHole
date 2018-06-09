@@ -70,6 +70,8 @@ Partial Class frmAbout
         '
         'btnAboutClose
         '
+        Me.btnAboutClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAboutClose.ForeColor = System.Drawing.Color.White
         Me.btnAboutClose.Location = New System.Drawing.Point(686, 401)
         Me.btnAboutClose.Name = "btnAboutClose"
         Me.btnAboutClose.Size = New System.Drawing.Size(102, 37)
@@ -79,6 +81,8 @@ Partial Class frmAbout
         '
         'Button1
         '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(12, 401)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 37)
@@ -88,6 +92,8 @@ Partial Class frmAbout
         '
         'Button2
         '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(168, 401)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(150, 37)
@@ -110,8 +116,7 @@ Partial Class frmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Black
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)

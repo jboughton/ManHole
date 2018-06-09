@@ -72,12 +72,15 @@ Partial Class frmSettings
         '
         'btnSetDefaultURL
         '
+        Me.btnSetDefaultURL.BackColor = System.Drawing.Color.Black
+        Me.btnSetDefaultURL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSetDefaultURL.ForeColor = System.Drawing.Color.White
         Me.btnSetDefaultURL.Location = New System.Drawing.Point(282, 80)
         Me.btnSetDefaultURL.Name = "btnSetDefaultURL"
         Me.btnSetDefaultURL.Size = New System.Drawing.Size(110, 23)
         Me.btnSetDefaultURL.TabIndex = 3
         Me.btnSetDefaultURL.Text = "Set to default"
-        Me.btnSetDefaultURL.UseVisualStyleBackColor = True
+        Me.btnSetDefaultURL.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -111,21 +114,27 @@ Partial Class frmSettings
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.Black
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(282, 408)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(110, 23)
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "Save Settings"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'btnExitWithoutSave
         '
+        Me.btnExitWithoutSave.BackColor = System.Drawing.Color.Black
+        Me.btnExitWithoutSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExitWithoutSave.ForeColor = System.Drawing.Color.White
         Me.btnExitWithoutSave.Location = New System.Drawing.Point(12, 408)
         Me.btnExitWithoutSave.Name = "btnExitWithoutSave"
         Me.btnExitWithoutSave.Size = New System.Drawing.Size(125, 23)
         Me.btnExitWithoutSave.TabIndex = 8
         Me.btnExitWithoutSave.Text = "Exit Without Saving"
-        Me.btnExitWithoutSave.UseVisualStyleBackColor = True
+        Me.btnExitWithoutSave.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -153,7 +162,7 @@ Partial Class frmSettings
         '
         'trkUpdateInterval
         '
-        Me.trkUpdateInterval.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.trkUpdateInterval.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.trkUpdateInterval.Location = New System.Drawing.Point(12, 318)
         Me.trkUpdateInterval.Maximum = 60
         Me.trkUpdateInterval.Minimum = 5
@@ -177,7 +186,7 @@ Partial Class frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(404, 443)
         Me.Controls.Add(Me.lblInterval)
         Me.Controls.Add(Me.trkUpdateInterval)
