@@ -16,7 +16,9 @@ Sometimes the Pi-Hole may become unresponsive, especially if you set auto-refres
 ![The right click tray menu](https://i.imgur.com/KnpxYj4.png)
 
 # Download
-Grab the latest release from: https://github.com/jboughton/ManHole/raw/master/ManHole/bin/Release/ManHole.exe
+Grab the latest release from: https://github.com/jboughton/ManHole/releases
+
+Read the changelog! You can download just the binary, or the source as well, if you're into that kind of thing.
 
 # License
 ManHole is open source freeware, just like the Pi-Hole. You're free to do with it what you wish, as long as you attribute me. 
