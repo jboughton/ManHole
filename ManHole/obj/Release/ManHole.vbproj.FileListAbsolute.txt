@@ -34,3 +34,5 @@ D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.exe
 D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.xml
 D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.pdb
 D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.vbprojAssemblyReference.cache
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\Interop.IWshRuntimeLibrary.dll
+D:\Dropbox\Visual Studio Projects\ManHole\ManHole\obj\Release\ManHole.vbproj.ResolveComReference.cache

@@ -4,7 +4,7 @@
   <description asmv2:iconFile="manhole-icon-new.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="ManHole" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="ManHole" version="1.2.2.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="ManHole.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,24 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ManHole.exe" size="2522048">
-      <assemblyIdentity name="ManHole" version="1.2.1.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ManHole.exe" size="2525632">
+      <assemblyIdentity name="ManHole" version="1.2.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zzMfUbf6VwHcxqx3C8+h3O5vgMGmMixSCLZG2jihIWU=</dsig:DigestValue>
+        <dsig:DigestValue>cCmXP0x0XDaa+0qmLXVFXTTVE7fVHcA6b6e+HJf88IU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ManHole.exe.config" size="1151">
+  <file name="ManHole.exe.config" size="1274">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/8LPauLLeFPQykmyq6/xwnxS+S+QtI91pzF8cfnNlIs=</dsig:DigestValue>
+      <dsig:DigestValue>MDfPVFx68Sk7ACvP9rT6Q/yAE90TctxxGqDw8JOTEc4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="manhole-icon-new.ico" size="113667">

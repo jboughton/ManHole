@@ -175,6 +175,10 @@ Public Class frmMain
             mnuAutoRefresh.Checked = False
             lblPHStatus.Text = "Disabled"
             lblPHStatus.ForeColor = Color.Red
+            TrayIcon.BalloonTipText = "Pi-hole is disabled!"
+            TrayIcon.BalloonTipTitle = "ManHole"
+            TrayIcon.BalloonTipIcon = ToolTipIcon.Warning
+            TrayIcon.ShowBalloonTip(3000)
         ElseIf lblPHStatus.Text = "Disabled" Then
             Dim disablePiHole As WebRequest = HttpWebRequest.Create(My.Settings.PiHoleURL.ToString & "api.php?enable&auth=" & My.Settings.AuthKey.ToString)
             disablePiHole.GetResponse()
@@ -184,6 +188,10 @@ Public Class frmMain
             mnuAutoRefresh.Checked = True
             lblPHStatus.Text = "Enabled"
             lblPHStatus.ForeColor = Color.Green
+            TrayIcon.BalloonTipText = "Pi-hole is enabled!"
+            TrayIcon.BalloonTipTitle = "ManHole"
+            TrayIcon.BalloonTipIcon = ToolTipIcon.Info
+            TrayIcon.ShowBalloonTip(3000)
         End If
     End Sub
 
@@ -281,6 +289,10 @@ Public Class frmMain
             btnAutoRefresh.Text = "Auto-refresh: Enabled"
             btnAutoRefresh.ForeColor = Color.Green
             mnuAutoRefresh.Checked = True
+        Else
+            btnAutoRefresh.Text = "Auto-refresh: Disabled"
+            btnAutoRefresh.ForeColor = Color.Red
+            mnuAutoRefresh.Checked = False
         End If
 
         Hide()
@@ -329,7 +341,11 @@ Public Class frmMain
     End Sub
 
     Private Sub lblRecentlyBlocked_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblRecentlyBlocked.LinkClicked
-        Process.Start(lblRecentlyBlocked.Text)
+        Clipboard.SetText(lblRecentlyBlocked.Text)
+        TrayIcon.BalloonTipText = "Copied recently blocked to clipboard"
+        TrayIcon.BalloonTipTitle = "ManHole"
+        TrayIcon.BalloonTipIcon = ToolTipIcon.Info
+        TrayIcon.ShowBalloonTip(3000)
     End Sub
 
     Private Sub btnAutoRefresh_Click(sender As Object, e As EventArgs) Handles btnAutoRefresh.Click
@@ -377,10 +393,12 @@ Public Class frmMain
             mnuAutoRefresh.Checked = False
             tmrUpdate.Enabled = False
             btnAutoRefresh.Text = "Auto-refresh: Disabled"
+            btnAutoRefresh.ForeColor = Color.Red
         ElseIf tmrUpdate.Enabled = False And btnAutoRefresh.Text = "Auto-refresh: Disabled" Then
             mnuAutoRefresh.Checked = True
             tmrUpdate.Enabled = True
             btnAutoRefresh.Text = "Auto-refresh: Enabled"
+            btnAutoRefresh.ForeColor = Color.Green
         End If
     End Sub
 
