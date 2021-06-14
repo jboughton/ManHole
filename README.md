@@ -4,6 +4,8 @@ A free and simple management utility for the Pi-Hole. ManHole will display your 
 ## Known issues
 Sometimes the Pi-Hole may become unresponsive, especially if you set auto-refresh too low, or try too quickly to disable/enable the Pi-Hole repeatedly.
 
+Sorry if you're having issues, but this was just a personal fun project that I haven't touched in years, and I don't even code anymore. If you have any problems, you'll have to patch it yourself, or find an alternative software. Sorry. Feel free to fork the code and continue the project if you wish!
+
 ## Screenshots
 
 ### The main interface
